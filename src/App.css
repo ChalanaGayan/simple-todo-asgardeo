@@ -1,0 +1,39 @@
+/* Keyframes for the typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+/* Typing effect container */
+.typing-container {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem; /* Adjust font size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white; /* Blinking cursor */
+  animation: typing 6s steps(30, end) infinite,
+    cursor-blink 0.75s step-end infinite;
+}
+
+/* Cursor blinking animation */
+@keyframes cursor-blink {
+  0%,
+  100% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: white;
+  }
+}
